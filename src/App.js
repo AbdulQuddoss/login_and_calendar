@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Login from './Pages/Registration/Login';
+import Calendar from './Pages/Calendar/Calendar';
+import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { registerLicense } from '@syncfusion/ej2-base';
+registerLicense('Ngo9BigBOggjHTQxAR8/V1NDaF5cWWtCf1JpR2BGfV5ycEVFallWTnZcUj0eQnxTdEFiWX1acXFQTmFdUEZwVg==');
+
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Login />}/>
+        <Route path='/calendar' element={<Calendar />}/>
+      </Routes>
+    </Router>
   );
 }
 
