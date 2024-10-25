@@ -62,10 +62,10 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     if(action === "Log in") {
-      if(formData.name === "" || formData.email === "") {
-        alert("Name or Email missing!");
-          return;
-      }
+      // if(formData.name === "" || formData.email === "") {
+      //   alert("Name or Email missing!");
+      //     return;
+      // }
 
       let userIsExist = user.find((item) => (item.email === formData.email) && (item.password === formData.password));
       if(userIsExist) {
